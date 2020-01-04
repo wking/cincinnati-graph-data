@@ -2,18 +2,27 @@
 
 import argparse
 import codecs
+import functools
 import io
 import json
 import logging
+import multiprocessing
 import os
 import re
 import tarfile
 
 import yaml
 
-from builtins import FileExistsError
-from urllib.request import Request, urlopen
-from multiprocessing import Pool, TimeoutError
+try:
+    from builtins import FileExistsError  # Python 3
+except ImportError:
+    FileExistsError = OSError  # sloppy hack for Python 2
+
+try:
+    from urllib.request import Request, urlopen  # Python 3
+except ImportError:
+    from urllib2 import Request, urlopen  # Python 2
+
 
 _VERSION_REGEXP = re.compile('^(?P<major>[0-9]*)\.(?P<minor>[0-9]*)(?P<suffix>[^0-9].*)$')
 logging.basicConfig(format='%(levelname)s: %(message)s')
@@ -159,14 +168,16 @@ def push(directory, token, push_versions):
     nodes = load_channels(directory=os.path.join(directory, 'channels'), nodes=nodes)
     nodes = block_edges(directory=os.path.join(directory, 'blocked-edges'), nodes=nodes)
 
-    sync_nodes = []
-    for version, node in sorted(nodes.items()):
-        if push_versions and version not in push_versions.split(','):
-            continue
-        sync_nodes.append((node, token))
+    sync_nodes = [
+        node for version, node in sorted(nodes.items())
+        if not push_versions or version in push_versions.split(',')
+    ]
 
-    with Pool(processes=16) as pool:
-        pool.starmap(sync_node, sync_nodes)
+    sync = functools.partial(sync_node, token=token)
+    pool = multiprocessing.Pool(processes=16)
+    pool.map(sync, sync_nodes)
+    pool.close()  # no context manager with-statement because in Python 2: AttributeError: '__exit__'
+
 
 def update_channels(node, token):
     labels = get_labels(node=node)
