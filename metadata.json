@@ -110,6 +110,9 @@
   "4.1.3": {
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,stable-4.1"
   },
+  "4.1.30-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "prerelease-4.1"
+  },
   "4.1.4": {
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,stable-4.1"
   },
