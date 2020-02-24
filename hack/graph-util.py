@@ -29,8 +29,10 @@ _VERSION_REGEXP = re.compile('^(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P
 logging.basicConfig(format='%(levelname)s: %(message)s')
 _LOGGER = logging.getLogger(__name__)
 
+
 def get_architecture(meta):
     return meta['image-config-data']['architecture']
+
 
 def get_log_version(node):
     meta = node['meta']
@@ -39,6 +41,7 @@ def get_log_version(node):
     if not semver_match:
         raise ValueError('version {} is not a valid Semantic Version'.format(node['version']))
     return '{}+{}'.format(remove_build(semver_match=semver_match), arch)
+
 
 def remove_build(semver_match):
     data = semver_match.groupdict()
@@ -278,6 +281,7 @@ def update_channels(node, token):
             },
             token=token)
 
+
 def update_previous(node, token):
     labels = get_labels(node=node)
     if node.get('previous', set()):
@@ -325,6 +329,7 @@ def sync_node(node, token):
         if label in labels:
             _LOGGER.warning('the {} label is deprecated for {}.  Use the previous label on the other release(s) instead (was: {})'.format(label, get_log_version(node), labels[label].get('value', '')))
             #delete_label(node=node, label=labels[label]['id'], key=label, token=token)
+
 
 def repository_uri(name, pullspec=None):
     if not pullspec:
@@ -429,7 +434,6 @@ def get_release_metadata(node):
     else:
         raise ValueError('unrecognized {} manifest format: {}'.format(node['payload'], json.dumps(manifest)))
 
-
     for layer in reversed(manifest['layers']):
         if layer['mediaType'] != 'application/vnd.docker.image.rootfs.diff.tar.gzip':
             raise ValueError('unsupported media type for {} layer {}: {}'.format(node['payload'], layer['digest'], layer['mediaType']))
@@ -467,6 +471,7 @@ def set_log_level(args):
     _LOGGER.setLevel(logging.INFO)
     if args.verbose == "debug":
         _LOGGER.setLevel(logging.DEBUG)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Utilities for managing graph data.')
