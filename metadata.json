@@ -176,7 +176,6 @@
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.2.13-s390x": {
-    "io.openshift.upgrades.graph.previous.add": "4.2.10-s390x,4.2.12-s390x",
     "io.openshift.upgrades.graph.previous.remove": "*",
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
