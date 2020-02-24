@@ -1,4 +1,7 @@
 name: stable-4.1
+feeder:
+  name: prerelease-4.1
+  delay: PT24H
 versions:
 - 4.1.0
 - 4.1.1
