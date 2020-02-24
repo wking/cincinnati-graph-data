@@ -38,7 +38,6 @@
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1"
   },
   "4.1.0-rc.8": {
-    "io.openshift.upgrades.graph.previous.add": "4.1.0-rc.7",
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1"
   },
   "4.1.0-rc.9": {
