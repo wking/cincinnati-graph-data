@@ -52,7 +52,7 @@ def stabilization_changes(directory):
         delay_string = channel['feeder']['delay']
         delay = parse_iso8601_delay(delay=delay_string)
         feeder_data = channels[feeder]
-        unpromoted = set(feeder_data['versions']) - set(channel['versions'])
+        unpromoted = set(feeder_data['versions']) - set(channel['versions']) - set(feeder_data.get('tombstones', {}))
         candidates = set(v for v in unpromoted if '-rc.' not in v)  # we don't promote RC releases beyond the candidate channel
         if not candidates:
             continue
