@@ -59,6 +59,12 @@ The `delay` value is an [ISO 8601][rfc-3339-p13] [duration][iso-8601-durations].
 This is the expected delay, but it does not mean that promotion will happen at that moment.
 For example, it is possible that release architects decide that there is insufficient data for a `fast-4.2` promotion, in which case the promotion can be delated until sufficient data accumulates.
 
+To see recommended feeder promotions, run:
+
+```console
+$ hack/stabilization-change.py
+```
+
 ### Block Edges
 
 Create/edit an appropriate file in `blocked_edges/`.
