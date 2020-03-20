@@ -116,6 +116,12 @@
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,stable-4.1,candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.1.34-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,stable-4.1,candidate-4.2,fast-4.2,stable-4.2"
+  },
+  "4.1.37-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,candidate-4.2"
+  },
+  "4.1.38-x86_64": {
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.1,candidate-4.2"
   },
   "4.1.4": {
@@ -144,7 +150,6 @@
     "io.openshift.upgrades.graph.release.channels": "prerelease-4.2"
   },
   "4.2.0-rc.5": {
-    "io.openshift.upgrades.graph.previous.remove": "*",
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,prerelease-4.2"
   },
   "4.2.1": {
@@ -191,24 +196,52 @@
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3"
   },
   "4.2.18-s390x": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2"
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.2.18-x86_64": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,candidate-4.3,fast-4.3"
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3"
   },
   "4.2.19-s390x": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.2"
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.2.19-x86_64": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,candidate-4.3"
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3"
   },
   "4.2.2": {
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.2.20-s390x": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.2"
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.2.20-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.2.21-s390x": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
+  },
+  "4.2.21-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.2.22-s390x": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
+  },
+  "4.2.22-x86_64": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.2.23-s390x": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
+  },
+  "4.2.23-x86_64": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2,candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.2.25-s390x": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.2"
+  },
+  "4.2.25-x86_64": {
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,candidate-4.3"
   },
   "4.2.4": {
@@ -224,11 +257,9 @@
     "io.openshift.upgrades.graph.release.channels": "candidate-4.2,fast-4.2,stable-4.2"
   },
   "4.3.0-rc.0-x86_64": {
-    "io.openshift.upgrades.graph.previous.remove": "*",
     "io.openshift.upgrades.graph.release.channels": "candidate-4.3"
   },
   "4.3.0-rc.3-x86_64": {
-    "io.openshift.upgrades.graph.previous.remove": "4.2.16",
     "io.openshift.upgrades.graph.release.channels": "candidate-4.3"
   },
   "4.3.0-x86_64": {
@@ -239,6 +270,24 @@
     "io.openshift.upgrades.graph.release.channels": "candidate-4.3,fast-4.3,stable-4.3"
   },
   "4.3.2-x86_64": {
-    "io.openshift.upgrades.graph.release.channels": "candidate-4.3"
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.3.3-x86_64": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.3,fast-4.3,stable-4.3"
+  },
+  "4.3.5-x86_64": {
+    "io.openshift.upgrades.graph.previous.remove": "*",
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.3,fast-4.3,stable-4.3,candidate-4.4"
+  },
+  "4.4.0-rc.0-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.4"
+  },
+  "4.4.0-rc.1-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.4"
+  },
+  "4.4.0-rc.2-x86_64": {
+    "io.openshift.upgrades.graph.release.channels": "candidate-4.4"
   }
 }
