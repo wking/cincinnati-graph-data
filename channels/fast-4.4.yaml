@@ -1,7 +1,7 @@
 name: fast-4.4
 feeder:
   name: candidate-4.4
-  delay: PT24H
+  delay: P1W
 versions:
 - 4.3.27
 

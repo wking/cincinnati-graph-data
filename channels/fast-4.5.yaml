@@ -1,5 +1,5 @@
 name: fast-4.5
 feeder:
   name: candidate-4.5
-  delay: PT24H
+  delay: P1W
 versions: []
