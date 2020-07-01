@@ -1,4 +1,7 @@
 name: candidate-4.5
+tombstones:
+# No 4.4.7, because we were minimizing Quay load
+- 4.4.7
 versions: 
 - 4.4.10
 
