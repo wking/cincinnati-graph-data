@@ -8,7 +8,7 @@ edition = "2018"
 cincinnati = { git = "https://github.com/openshift/cincinnati", rev = "627049937249cc2e9da8e0c134e8e9ea930afc2b"}
 actix-http = "=3.0.0-beta.5"
 actix-service = "=2.0.0-beta.5"
-tokio = { version = "1.7", features = [ "fs", "rt-multi-thread" ] }
+tokio = { version = "1.11", features = [ "fs", "rt-multi-thread" ] }
 serde = "^1.0.130"
 serde_yaml = "^0.8.21"
 anyhow = "1.0"
