@@ -1,8 +1,8 @@
 {
   "nodes": [
     {
-      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:FIXME-match-your-digest",
-      "version": "4.10.0-FIXME-match-your-version"
+      "payload": "quay.io/openshift-release-dev/ocp-release-nightly@sha256:39cacdae6214efce10005054fb492f02d26b59fe9d23686dc17ec8a42f428534",
+      "version": "4.10.0-0.nightly-2021-12-23-153012"
     },
     {
       "payload": "quay.io/openshift-release-dev/ocp-release@sha256:0000000000000000000000000000000000000000000000000000000000000000",
@@ -16,7 +16,7 @@
   "edges": [[0,1]],
   "conditionalEdges": [
     {
-      "edges": [{"from": "4.10.0-FIXME-match-your-version", "to": "4.10.0-conditionally-recommended"}],
+      "edges": [{"from": "4.10.0-0.nightly-2021-12-23-153012", "to": "4.10.0-conditionally-recommended"}],
       "risks": [
         {
           "url": "https://bug.example.com/a",
