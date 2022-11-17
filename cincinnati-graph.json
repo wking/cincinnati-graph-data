@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:20e270c3349fe2fcb38fd0da155329babc02d6b53e7e06ff235346c3c1cf11b",
+      "version": "4.12.0-ec.5"
+    },
+    {
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:7ac78aaca993bf307010e8e92642da2bc28e275fbac241b42f24be46153f12d1",
+      "version": "4.12.0-rc.0"
+    }
+  ],
+  "edges": [[0,1]]
+}
