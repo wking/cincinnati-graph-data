@@ -1,7 +1,16 @@
-{ 
+{
   "nodes": [
     {"version": "4.15.0-0.test-2023-09-19-193506-ci-ln-qs5v8tt-latest", "payload": "registry.build02.ci.openshift.org/ci-ln-qs5v8tt/release@sha256:ebc665c8f2d59b1eefb6fb802228743d746de42c2f73214b63ae61e0e2d0e20a"},
     {"version": "4.15.1", "payload": "registry.build02.ci.openshift.org/ci-ln-qs5v8tt/release@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
   ],
-  "conditionalEdges": [] 
+  "conditionalEdges": [
+    {
+      "edges": [{"from": "4.15.0-0.test-2023-09-19-193506-ci-ln-qs5v8tt-latest", "to": "4.15.1"}],
+      "risks": [
+        {"url": "https://bug.example.com/a", "name": "A", "message": "A.", "matchingRules": [{"type": "PromQL", "promql": {"promql": "max(cluster_proxy_enabled{type=~\"https?\"})"}}]},
+        {"url": "https://bug.example.com/b", "name": "B", "message": "B.", "matchingRules": [{"type": "PromQL", "promql": {"promql": "group(cluster_version_available_updates{channel=\"buggy\"})\nor\n0 * group(cluster_version_available_updates{channel!=\"buggy\"})"}}]},
+        {"url": "https://bug.example.com/c", "name": "C", "message": "C.", "matchingRules": [{"type": "PromQL", "promql": {"promql": "group(csv_succeeded{name=~\"local-storage-operator[.].*\"}) or 0 * group(csv_count)"}}]}
+      ]
+    }
+  ]
 }
