@@ -1,0 +1,7 @@
+{ 
+  "nodes": [
+    {"version": "4.15.0-0.test-2023-09-19-193506-ci-ln-qs5v8tt-latest", "payload": "registry.build02.ci.openshift.org/ci-ln-qs5v8tt/release@sha256:ebc665c8f2d59b1eefb6fb802228743d746de42c2f73214b63ae61e0e2d0e20a"},
+    {"version": "4.15.1", "payload": "registry.build02.ci.openshift.org/ci-ln-qs5v8tt/release@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+  ],
+  "conditionalEdges": [] 
+}
