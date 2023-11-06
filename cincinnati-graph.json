@@ -26,7 +26,7 @@
             {
               "type": "PromQL",
               "promql": {
-                "promql": "max(cluster_proxy_enabled{type=~\"https?\"})"
+                "promql": "group(max(cluster_proxy_enabled{type=~\"https?\"}))"
               }
             }
           ]
