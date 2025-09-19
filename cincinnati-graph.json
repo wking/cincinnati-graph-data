@@ -1,13 +1,25 @@
 {
   "nodes": [
     {
-      "payload": "registry.build09.ci.openshift.org/ci-ln-zwy5pcb/release@sha256:376dcea3efeb80346acb85f0150eb031b371e1a5dc84266d4b1cba8f94225557",
-      "version": "4.18.0-0.test-2024-10-30-044557-ci-ln-zwy5pcb-latest"
+      "payload": "registry.build11.ci.openshift.org/ci-ln-mwhnlck/release@sha256:5c287af573279895ba93fe562345bb0b38caae30c79a79a23b7abf66e3337fc4",
+      "version": "4.21.0-0-2025-09-19-155315-test-ci-ln-mwhnlck-latest",
+      "metadata": {
+        "url": "https://example.com/current",
+        "io.openshift.upgrades.graph.release.channels": "channel-a,channel-current"
+      }
     },
     {
       "payload": "quay.io/openshift-release-dev/ocp-release@sha256:0000000000000000000000000000000000000000000000000000000000000000",
-      "version": "4.18.0-always-recommended"
+      "version": "4.22.0-always-recommended",
+      "metadata": {
+        "url": "https://example.com/0",
+        "io.openshift.upgrades.graph.release.channels": "channel-a,channel-0"
+      }
+    },
+    {
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "version": "4.22.1-always-recommended"
     }
   ],
-  "edges": [[0,1]]
+  "edges": [[0,1], [0,2]]
 }
