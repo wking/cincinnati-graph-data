@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "payload": "registry.build10.ci.openshift.org/ci-ln-bk7yf1t/release@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "payload": "registry.build10.ci.openshift.org/ci-ln-bk7yf1t/release@sha256:7bbed88c06f5f12942d554987f25e6560ea270460b2cc1c3214eb27b5edfff73",
       "version": "4.21.0-0-2025-10-05-000656-test-ci-ln-bk7yf1t-latest",
       "metadata": {
         "url": "https://example.com/current",
