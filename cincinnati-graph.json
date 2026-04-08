@@ -1,8 +1,8 @@
 {
   "nodes": [
     {
-      "payload": "registry.build10.ci.openshift.org/ci-ln-bk7yf1t/release@sha256:7bbed88c06f5f12942d554987f25e6560ea270460b2cc1c3214eb27b5edfff73",
-      "version": "4.21.0-0-2025-10-05-000656-test-ci-ln-bk7yf1t-latest",
+      "payload": "registry.build10.ci.openshift.org/ci-ln-5tsyhlb/release@sha256:13b44131ccddc1eefc6209367e3cc80e43229dbd19f1de9ccc3fe23b2021b60a",
+      "version": "4.22.0-0-2026-04-08-051426-test-ci-ln-5tsyhlb-latest",
       "metadata": {
         "url": "https://example.com/current",
         "io.openshift.upgrades.graph.release.channels": "channel-a,channel-current"
@@ -18,8 +18,28 @@
     },
     {
       "payload": "quay.io/openshift-release-dev/ocp-release@sha256:1111111111111111111111111111111111111111111111111111111111111111",
-      "version": "4.22.1-always-recommended"
+      "version": "4.22.1-conditionally-recommended"
     }
   ],
-  "edges": [[0,1], [0,2]]
+  "edges": [[0,1]],
+  "conditionalEdges": [
+    {
+      "edges": [{"from": "4.22.0-0-2026-04-08-051426-test-ci-ln-5tsyhlb-latest", "to": "4.22.1-conditionally-recommend"}],
+      "risks": [
+        {
+          "url": "https://example.com/broken-promql",
+          "name": "BrokenPromQL",
+          "message": "Testing with broken PromQL to trigger failed risk evaluation.",
+          "matchingRules": [
+            {
+              "type": "PromQL",
+              "promql": {
+                "promql": "cluster_version"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
