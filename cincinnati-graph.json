@@ -24,7 +24,7 @@
   "edges": [[0,1]],
   "conditionalEdges": [
     {
-      "edges": [{"from": "4.22.0-0-2026-04-08-051426-test-ci-ln-5tsyhlb-latest", "to": "4.22.1-conditionally-recommend"}],
+      "edges": [{"from": "4.22.0-0-2026-04-08-051426-test-ci-ln-5tsyhlb-latest", "to": "4.22.1-conditionally-recommended"}],
       "risks": [
         {
           "url": "https://example.com/broken-promql",
